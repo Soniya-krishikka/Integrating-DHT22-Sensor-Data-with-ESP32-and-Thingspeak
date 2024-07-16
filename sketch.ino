@@ -10,7 +10,7 @@ const int DHT_PIN = 15; // Pin number to which the DHT22 sensor is connected
 const char* WIFI_NAME = "Wokwi-GUEST"; // Name of the WiFi network
 const char* WIFI_PASSWORD = ""; // Password of the WiFi network
 const int myChannelNumber = 1881348; // ThingSpeak channel number
-const char* myApiKey = "0VT00L9VQJYCLBLI"; // ThingSpeak API key
+const char* myApiKey = "Your Thingspeak API"; // ThingSpeak API key
 const char* server = "api.thingspeak.com"; // ThingSpeak server address
 
 DHTesp dhtSensor; // Create an instance of the DHTesp library
@@ -21,7 +21,7 @@ void setup() {
   dhtSensor.setup(DHT_PIN, DHTesp::DHT22); // Initialize the DHT22 sensor
   WiFi.begin(WIFI_NAME, WIFI_PASSWORD); // Connect to the WiFi network
   while (WiFi.status() != WL_CONNECTED){
-    delay(1000);
+    delay(20000);
     Serial.println("Wifi not connected"); // Print a message if WiFi is not connected
   }
   Serial.println("Wifi connected !"); // Print a message if WiFi is connected
